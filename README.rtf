@@ -1,0 +1,38 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf200
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Sahas Kurumety Assignment 3:\
+\
+isFullSolution Method:\
+Does not check for accuracy, just that all values are non-zero. This works because reject is called before it and the solve method will therefore not return an incomplete solution.\
+\
+\
+Reject method:\
+Rejects all squares with:\
+-Values higher than max value for square\
+-Rows or columns adding up to over max sum for the rows\
+-Rows or columns *with no zeros* adding up to anything not equal to correct sum\
+*Does not need to account for duplicate values, because next method already does.\
+\
+\
+Next method:\
+Does not call next onto any values which are already at the max allowed for square\
+Adds 1 to the last editable item which is not equal to max value\
+Returns null whenever the bottom right value is the max allowed for the particular square, and the original input is 0. This works in practice as a way to prevent duplicates in the square. (Cuts runtime by a factor of ~n)\
+\
+\
+Other:\
+Added a runtime clock to show runtime in milliseconds when the program completes solving the square\
+\
+\
+\
+\
+\
+\
+\
+\
+}
